@@ -1,0 +1,1459 @@
+2024-08-09 12:25:00,440 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 12:25:05,326 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 12:25:05,556 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 12:30:44,197 |     INFO | aiogram.event | Update id=315685922 is not handled. Duration 21 ms by bot id=6643124937
+2024-08-09 12:30:44,198 |    ERROR | aiogram.event | Cause exception while process update id=315685922 by bot id=6643124937
+AttributeError: 'Update' object has no attribute 'from_user'
+Traceback (most recent call last):
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/middlewares/notify_15_min.py", line 19, in __call__
+    user_id = event.from_user.id
+              ^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/pydantic/main.py", line 828, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'Update' object has no attribute 'from_user'
+2024-08-09 12:31:06,225 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 12:31:06,225 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 12:31:06,225 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 12:31:07,834 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 12:31:08,735 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 12:31:09,027 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 12:31:10,158 |     INFO | aiogram.event | Update id=315685923 is not handled. Duration 3 ms by bot id=6643124937
+2024-08-09 12:31:10,158 |    ERROR | aiogram.event | Cause exception while process update id=315685923 by bot id=6643124937
+ValidationError: 4 validation errors for SendMessage
+reply_markup.InlineKeyboardMarkup
+  Input should be a valid dictionary or instance of InlineKeyboardMarkup [type=model_type, input_value=<aiogram.utils.keyboard.I...r object at 0x106a9f650>, input_type=InlineKeyboardBuilder]
+    For further information visit https://errors.pydantic.dev/2.8/v/model_type
+reply_markup.ReplyKeyboardMarkup
+  Input should be a valid dictionary or instance of ReplyKeyboardMarkup [type=model_type, input_value=<aiogram.utils.keyboard.I...r object at 0x106a9f650>, input_type=InlineKeyboardBuilder]
+    For further information visit https://errors.pydantic.dev/2.8/v/model_type
+reply_markup.ReplyKeyboardRemove
+  Input should be a valid dictionary or instance of ReplyKeyboardRemove [type=model_type, input_value=<aiogram.utils.keyboard.I...r object at 0x106a9f650>, input_type=InlineKeyboardBuilder]
+    For further information visit https://errors.pydantic.dev/2.8/v/model_type
+reply_markup.ForceReply
+  Input should be a valid dictionary or instance of ForceReply [type=model_type, input_value=<aiogram.utils.keyboard.I...r object at 0x106a9f650>, input_type=InlineKeyboardBuilder]
+    For further information visit https://errors.pydantic.dev/2.8/v/model_type
+Traceback (most recent call last):
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/handlers/start.py", line 13, in command_start_handler
+    await msg.answer("Добро пожаловать в наш бот!", reply_markup=selection.selection)
+          ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/types/message.py", line 2044, in answer
+    return SendMessage(
+           ^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/pydantic/main.py", line 193, in __init__
+    self.__pydantic_validator__.validate_python(data, self_instance=self)
+pydantic_core._pydantic_core.ValidationError: 4 validation errors for SendMessage
+reply_markup.InlineKeyboardMarkup
+  Input should be a valid dictionary or instance of InlineKeyboardMarkup [type=model_type, input_value=<aiogram.utils.keyboard.I...r object at 0x106a9f650>, input_type=InlineKeyboardBuilder]
+    For further information visit https://errors.pydantic.dev/2.8/v/model_type
+reply_markup.ReplyKeyboardMarkup
+  Input should be a valid dictionary or instance of ReplyKeyboardMarkup [type=model_type, input_value=<aiogram.utils.keyboard.I...r object at 0x106a9f650>, input_type=InlineKeyboardBuilder]
+    For further information visit https://errors.pydantic.dev/2.8/v/model_type
+reply_markup.ReplyKeyboardRemove
+  Input should be a valid dictionary or instance of ReplyKeyboardRemove [type=model_type, input_value=<aiogram.utils.keyboard.I...r object at 0x106a9f650>, input_type=InlineKeyboardBuilder]
+    For further information visit https://errors.pydantic.dev/2.8/v/model_type
+reply_markup.ForceReply
+  Input should be a valid dictionary or instance of ForceReply [type=model_type, input_value=<aiogram.utils.keyboard.I...r object at 0x106a9f650>, input_type=InlineKeyboardBuilder]
+    For further information visit https://errors.pydantic.dev/2.8/v/model_type
+2024-08-09 12:31:44,266 |     INFO | aiogram.event | Update id=315685924 is handled. Duration 865 ms by bot id=6643124937
+2024-08-09 12:31:50,035 |     INFO | aiogram.event | Update id=315685925 is handled. Duration 421 ms by bot id=6643124937
+2024-08-09 12:32:37,754 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 12:32:37,755 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 12:32:37,755 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 12:32:39,328 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 12:32:41,981 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 12:32:42,499 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 12:32:46,159 |     INFO | aiogram.event | Update id=315685927 is handled. Duration 921 ms by bot id=6643124937
+2024-08-09 12:32:48,043 |     INFO | aiogram.event | Update id=315685928 is handled. Duration 259 ms by bot id=6643124937
+2024-08-09 12:32:49,470 |     INFO | aiogram.event | Update id=315685929 is handled. Duration 264 ms by bot id=6643124937
+2024-08-09 12:33:06,863 |     INFO | aiogram.event | Update id=315685930 is handled. Duration 732 ms by bot id=6643124937
+2024-08-09 12:33:14,821 |     INFO | aiogram.event | Update id=315685931 is not handled. Duration 1183 ms by bot id=6643124937
+2024-08-09 12:33:14,821 |    ERROR | aiogram.event | Cause exception while process update id=315685931 by bot id=6643124937
+AttributeError: module 'utils' has no attribute 'get_direction'
+Traceback (most recent call last):
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/handlers/weather.py", line 19, in user_name
+    await msg.answer(await openweathermap_api.get_weather(msg.text))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/utils/openweathermap_api.py", line 25, in get_weather
+    d = await utils.get_direction(results['wind']['deg'])
+              ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'utils' has no attribute 'get_direction'
+2024-08-09 12:34:21,155 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 12:34:21,156 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 12:34:21,156 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 12:34:22,731 |  WARNING | run | Use: python bot.py
+2024-08-09 12:34:22,739 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 12:34:23,594 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 12:34:23,928 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 12:34:25,652 |     INFO | aiogram.event | Update id=315685932 is handled. Duration 818 ms by bot id=6643124937
+2024-08-09 12:34:31,474 |     INFO | aiogram.event | Update id=315685933 is not handled. Duration 1104 ms by bot id=6643124937
+2024-08-09 12:34:31,475 |    ERROR | aiogram.event | Cause exception while process update id=315685933 by bot id=6643124937
+TypeError: error_handler() missing 1 required positional argument: 'message'
+Traceback (most recent call last):
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/handlers/weather.py", line 19, in user_name
+    await msg.answer(await openweathermap_api.get_weather(msg.text))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/utils/openweathermap_api.py", line 25, in get_weather
+    d = await utils.get_direction(results['wind']['deg'])
+              ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'utils' has no attribute 'get_direction'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 29, in __call__
+    response = await self.router.propagate_event(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+                 ^^^^^^^^^
+TypeError: error_handler() missing 1 required positional argument: 'message'
+2024-08-09 12:34:53,454 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 12:34:53,455 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 12:34:53,455 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 12:34:55,025 |  WARNING | run | Use: python bot.py
+2024-08-09 12:34:55,032 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 12:34:55,821 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 12:34:56,081 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 12:34:58,642 |     INFO | aiogram.event | Update id=315685934 is handled. Duration 1385 ms by bot id=6643124937
+2024-08-09 12:35:03,003 |     INFO | aiogram.event | Update id=315685935 is not handled. Duration 1211 ms by bot id=6643124937
+2024-08-09 12:35:03,004 |    ERROR | aiogram.event | Cause exception while process update id=315685935 by bot id=6643124937
+TypeError: error_handler() missing 1 required positional argument: 'message'
+Traceback (most recent call last):
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/handlers/weather.py", line 19, in user_name
+    await msg.answer(await openweathermap_api.get_weather(msg.text))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/utils/openweathermap_api.py", line 25, in get_weather
+    d = await utils.get_direction(results['wind']['deg'])
+              ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'utils' has no attribute 'get_direction'
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 309, in _process_update
+    response = await self.feed_update(bot, update, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 158, in feed_update
+    response = await self.update.wrap_outer_middleware(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 29, in __call__
+    response = await self.router.propagate_event(
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+                 ^^^^^^^^^
+TypeError: error_handler() missing 1 required positional argument: 'message'
+2024-08-09 12:35:10,487 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 12:35:10,487 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 12:35:10,487 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 12:35:11,979 |  WARNING | run | Use: python bot.py
+2024-08-09 12:35:11,985 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 12:35:12,900 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 12:35:13,192 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 12:35:21,334 |     INFO | aiogram.event | Update id=315685937 is handled. Duration 879 ms by bot id=6643124937
+2024-08-09 12:35:24,334 | CRITICAL | run | Critical error caused by module 'utils' has no attribute 'get_direction'
+Traceback (most recent call last):
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/handlers/weather.py", line 19, in user_name
+    await msg.answer(await openweathermap_api.get_weather(msg.text))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/utils/openweathermap_api.py", line 25, in get_weather
+    d = await utils.get_direction(results['wind']['deg'])
+              ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'utils' has no attribute 'get_direction'
+2024-08-09 12:35:24,339 |     INFO | aiogram.event | Update id=315685938 is handled. Duration 802 ms by bot id=6643124937
+2024-08-09 12:37:47,317 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 12:37:47,318 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 12:37:47,318 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 12:37:48,930 |  WARNING | run | Use: python bot.py
+2024-08-09 12:37:48,937 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 12:37:49,796 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 12:37:50,025 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 12:37:53,168 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 12:37:53,168 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 12:37:53,168 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 12:37:54,672 |  WARNING | run | Use: python bot.py
+2024-08-09 12:37:54,679 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 12:37:55,393 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 12:37:55,691 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 12:37:59,809 |     INFO | aiogram.event | Update id=315685940 is handled. Duration 822 ms by bot id=6643124937
+2024-08-09 12:38:05,610 | CRITICAL | run | Critical error caused by module 'utils' has no attribute 'get_direction'
+Traceback (most recent call last):
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/handlers/weather.py", line 19, in user_name
+    await msg.answer(await openweathermap_api.get_weather(msg.text))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/utils/openweathermap_api.py", line 25, in get_weather
+    d = await utils.get_direction(results['wind']['deg'])
+              ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'utils' has no attribute 'get_direction'
+2024-08-09 12:38:05,881 |     INFO | aiogram.event | Update id=315685941 is handled. Duration 1544 ms by bot id=6643124937
+2024-08-09 12:38:28,212 |     INFO | aiogram.event | Update id=315685942 is handled. Duration 798 ms by bot id=6643124937
+2024-08-09 12:38:35,518 |     INFO | aiogram.event | Update id=315685943 is handled. Duration 334 ms by bot id=6643124937
+2024-08-09 12:38:38,425 |     INFO | aiogram.event | Update id=315685944 is not handled. Duration 2 ms by bot id=6643124937
+2024-08-09 12:39:03,345 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 12:39:03,345 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 12:39:03,345 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 12:39:04,853 |  WARNING | run | Use: python bot.py
+2024-08-09 12:39:04,860 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 12:39:05,840 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 12:39:06,069 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 12:39:07,124 |     INFO | aiogram.event | Update id=315685945 is handled. Duration 811 ms by bot id=6643124937
+2024-08-09 12:39:07,642 |     INFO | aiogram.event | Update id=315685946 is handled. Duration 712 ms by bot id=6643124937
+2024-08-09 12:39:15,615 |     INFO | aiogram.event | Update id=315685947 is handled. Duration 255 ms by bot id=6643124937
+2024-08-09 12:39:23,900 | CRITICAL | run | Critical error caused by 'list' object has no attribute 'width'
+Traceback (most recent call last):
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/handlers/photo.py", line 15, in photo_handler
+    await msg.answer(f"Размеры изображения: {msg.photo.width} x {msg.photo.height}")
+                                             ^^^^^^^^^^^^^^^
+AttributeError: 'list' object has no attribute 'width'
+2024-08-09 12:39:24,247 |     INFO | aiogram.event | Update id=315685948 is handled. Duration 349 ms by bot id=6643124937
+2024-08-09 12:39:40,884 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 12:39:40,884 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 12:39:40,884 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 12:39:42,461 |  WARNING | run | Use: python bot.py
+2024-08-09 12:39:42,468 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 12:39:43,383 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 12:39:43,629 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 12:39:45,161 |     INFO | aiogram.event | Update id=315685949 is handled. Duration 848 ms by bot id=6643124937
+2024-08-09 12:39:49,340 |     INFO | aiogram.event | Update id=315685950 is handled. Duration 260 ms by bot id=6643124937
+2024-08-09 12:40:02,668 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 12:40:02,669 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 12:40:02,669 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 12:40:04,237 |  WARNING | run | Use: python bot.py
+2024-08-09 12:40:04,244 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 12:40:05,082 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 12:40:05,348 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 12:40:10,137 |     INFO | aiogram.event | Update id=315685951 is handled. Duration 827 ms by bot id=6643124937
+2024-08-09 12:41:34,045 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 12:41:34,045 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 12:41:34,046 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 12:41:35,624 |  WARNING | run | Use: python bot.py
+2024-08-09 12:41:35,631 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 12:41:37,466 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 12:41:37,695 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 12:41:50,211 |     INFO | aiogram.event | Update id=315685952 is handled. Duration 849 ms by bot id=6643124937
+2024-08-09 12:43:41,464 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 12:43:41,465 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 12:43:41,465 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 12:43:43,111 |  WARNING | run | Use: python bot.py
+2024-08-09 12:43:43,118 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 12:43:43,965 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 12:43:44,254 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 12:48:15,417 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 12:48:15,419 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 12:48:15,419 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 12:48:17,011 |  WARNING | run | Use: python bot.py
+2024-08-09 12:48:17,019 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 12:48:18,194 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 12:48:18,429 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 12:48:19,481 |     INFO | aiogram.event | Update id=315685953 is handled. Duration 806 ms by bot id=6643124937
+2024-08-09 12:48:38,092 |     INFO | aiogram.event | Update id=315685954 is handled. Duration 866 ms by bot id=6643124937
+2024-08-09 12:48:54,976 |     INFO | aiogram.event | Update id=315685955 is handled. Duration 766 ms by bot id=6643124937
+2024-08-09 12:49:00,281 |     INFO | aiogram.event | Update id=315685956 is handled. Duration 1096 ms by bot id=6643124937
+2024-08-09 12:49:22,239 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 12:49:22,239 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 12:49:22,239 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 12:49:23,842 |  WARNING | run | Use: python bot.py
+2024-08-09 12:49:23,850 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 12:49:25,041 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 12:49:25,343 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 12:49:28,848 |     INFO | aiogram.event | Update id=315685958 is handled. Duration 872 ms by bot id=6643124937
+2024-08-09 12:49:31,674 | CRITICAL | run | Critical error caused by module 'utils' has no attribute 'get_direction'
+Traceback (most recent call last):
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 162, in _propagate_event
+    response = await observer.trigger(event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/handlers/weather.py", line 19, in user_name
+    await msg.answer(await openweathermap_api.get_weather(msg.text))
+                     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/utils/openweathermap_api.py", line 26, in get_weather
+    d = await utils.get_direction(results['wind']['deg'])
+              ^^^^^^^^^^^^^^^^^^^
+AttributeError: module 'utils' has no attribute 'get_direction'
+2024-08-09 12:49:31,999 |     INFO | aiogram.event | Update id=315685959 is handled. Duration 1179 ms by bot id=6643124937
+2024-08-09 12:50:41,917 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 12:50:41,917 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 12:50:41,917 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 12:50:43,514 |  WARNING | run | Use: python bot.py
+2024-08-09 12:50:43,521 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 12:50:44,698 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 12:50:45,010 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 12:50:46,437 |     INFO | aiogram.event | Update id=315685961 is handled. Duration 967 ms by bot id=6643124937
+2024-08-09 12:50:50,990 |     INFO | aiogram.event | Update id=315685962 is handled. Duration 1041 ms by bot id=6643124937
+2024-08-09 12:52:09,046 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 12:52:09,047 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 12:52:09,047 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 12:52:10,638 |  WARNING | run | Use: python bot.py
+2024-08-09 12:52:10,646 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 12:52:12,350 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 12:52:12,663 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 12:52:16,676 |     INFO | aiogram.event | Update id=315685964 is handled. Duration 893 ms by bot id=6643124937
+2024-08-09 12:52:20,586 |     INFO | aiogram.event | Update id=315685965 is handled. Duration 1273 ms by bot id=6643124937
+2024-08-09 12:52:34,352 |     INFO | aiogram.event | Update id=315685966 is handled. Duration 265 ms by bot id=6643124937
+2024-08-09 12:52:39,601 |     INFO | aiogram.event | Update id=315685967 is handled. Duration 249 ms by bot id=6643124937
+2024-08-09 12:52:45,739 |     INFO | aiogram.event | Update id=315685968 is handled. Duration 366 ms by bot id=6643124937
+2024-08-09 12:52:50,727 |     INFO | aiogram.event | Update id=315685969 is handled. Duration 350 ms by bot id=6643124937
+2024-08-09 12:59:20,049 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 12:59:20,051 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 12:59:20,051 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 12:59:21,639 |  WARNING | run | Use: python bot.py
+2024-08-09 12:59:21,646 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 12:59:22,852 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 12:59:23,188 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:01:06,263 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:01:06,263 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:01:06,263 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 13:01:07,862 |  WARNING | run | Use: python bot.py
+2024-08-09 13:01:07,870 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 13:01:08,796 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 13:01:08,796 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 13:01:08,797 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 13:01:09,045 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:01:34,376 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:01:34,376 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:01:34,377 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 13:01:36,816 |  WARNING | run | Use: python bot.py
+2024-08-09 13:04:09,374 |  WARNING | run | Use: python bot.py
+2024-08-09 13:05:52,519 |  WARNING | run | Use: python bot.py
+2024-08-09 13:05:52,527 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 13:05:53,433 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 13:05:53,434 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 13:05:53,434 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 13:05:53,716 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:06:00,002 |     INFO | apscheduler.executors.default | Running job "send_message_at_9_am (trigger: cron[hour='13', minute='6'], next run at: 2024-08-10 13:06:00 +05)" (scheduled at 2024-08-09 13:06:00+05:00)
+2024-08-09 13:06:00,965 |     INFO | apscheduler.executors.default | Job "send_message_at_9_am (trigger: cron[hour='13', minute='6'], next run at: 2024-08-10 13:06:00 +05)" executed successfully
+2024-08-09 13:06:17,092 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:06:17,092 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:06:17,092 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 13:11:21,724 |  WARNING | run | Use: python bot.py
+2024-08-09 13:11:21,732 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 13:11:22,593 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 13:11:22,593 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 13:11:22,593 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 13:11:22,820 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:11:33,036 | CRITICAL | run | Critical error caused by 'Update' object has no attribute 'update'
+Traceback (most recent call last):
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/middlewares/notify_15_min.py", line 19, in __call__
+    user_id = event.update.message.from_user.id
+              ^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/pydantic/main.py", line 828, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'Update' object has no attribute 'update'
+2024-08-09 13:11:33,952 |     INFO | aiogram.event | Update id=315685970 is handled. Duration 917 ms by bot id=6643124937
+2024-08-09 13:11:56,991 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:11:56,991 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:11:56,992 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 13:11:59,852 |  WARNING | run | Use: python bot.py
+2024-08-09 13:11:59,860 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 13:12:00,721 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 13:12:00,722 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 13:12:00,722 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 13:12:00,949 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:12:01,260 | CRITICAL | run | Critical error caused by 'Update' object has no attribute 'update'
+Traceback (most recent call last):
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/middlewares/notify_15_min.py", line 20, in __call__
+    user_id = event.update.message.from_user.id
+              ^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/pydantic/main.py", line 828, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'Update' object has no attribute 'update'
+2024-08-09 13:12:02,347 |     INFO | aiogram.event | Update id=315685971 is handled. Duration 1088 ms by bot id=6643124937
+2024-08-09 13:12:16,577 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:12:16,578 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:12:16,578 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 13:12:19,307 |  WARNING | run | Use: python bot.py
+2024-08-09 13:12:19,314 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 13:12:20,188 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 13:12:20,188 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 13:12:20,188 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 13:12:20,482 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:12:20,814 |     INFO | aiogram.event | Update id=315685972 is handled. Duration 1 ms by bot id=6643124937
+2024-08-09 13:12:25,639 |     INFO | aiogram.event | Update id=315685973 is handled. Duration 1 ms by bot id=6643124937
+2024-08-09 13:12:46,608 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:12:46,608 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:12:46,608 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 13:12:49,309 |  WARNING | run | Use: python bot.py
+2024-08-09 13:12:49,316 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 13:12:50,080 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 13:12:50,080 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 13:12:50,080 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 13:12:50,316 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:12:51,090 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:12:51,091 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:12:51,091 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 13:12:53,736 |  WARNING | run | Use: python bot.py
+2024-08-09 13:12:53,744 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 13:12:54,600 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 13:12:54,600 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 13:12:54,600 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 13:12:54,842 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:12:56,104 |     INFO | aiogram.event | Update id=315685974 is handled. Duration 1 ms by bot id=6643124937
+2024-08-09 13:19:36,999 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:19:37,000 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:19:37,000 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 13:19:39,926 |  WARNING | run | Use: python bot.py
+2024-08-09 13:19:39,934 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 13:19:40,728 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 13:19:40,728 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 13:19:40,728 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 13:19:40,973 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:19:43,849 | CRITICAL | run | Critical error caused by argument of type 'ReminderMiddleware' is not iterable
+Traceback (most recent call last):
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/middlewares/notify_15_min.py", line 56, in __call__
+    if chat_id in self:
+       ^^^^^^^^^^^^^^^
+TypeError: argument of type 'ReminderMiddleware' is not iterable
+2024-08-09 13:19:44,686 |     INFO | aiogram.event | Update id=315685975 is handled. Duration 838 ms by bot id=6643124937
+2024-08-09 13:23:38,824 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:23:38,825 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:23:38,825 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 13:24:49,858 |  WARNING | run | Use: python bot.py
+2024-08-09 13:25:23,805 |  WARNING | run | Use: python bot.py
+2024-08-09 13:25:23,813 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 13:25:25,114 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 13:25:25,114 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 13:25:25,114 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 13:25:25,366 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:25:29,673 |     INFO | aiogram.event | Update id=315685976 is handled. Duration 831 ms by bot id=6643124937
+2024-08-09 13:25:55,726 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:25:55,726 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:25:55,726 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 13:25:58,377 |  WARNING | run | Use: python bot.py
+2024-08-09 13:25:58,384 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 13:25:59,192 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 13:25:59,193 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 13:25:59,193 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 13:25:59,420 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:26:03,336 |     INFO | aiogram.event | Update id=315685977 is handled. Duration 960 ms by bot id=6643124937
+2024-08-09 13:26:29,174 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:26:29,174 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:26:29,174 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 13:26:31,804 |  WARNING | run | Use: python bot.py
+2024-08-09 13:26:31,811 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 13:26:32,619 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 13:26:32,619 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 13:26:32,619 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 13:26:32,912 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:26:35,512 |     INFO | aiogram.event | Update id=315685978 is handled. Duration 800 ms by bot id=6643124937
+2024-08-09 13:27:17,991 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:27:17,991 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:27:17,991 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 13:27:20,732 |  WARNING | run | Use: python bot.py
+2024-08-09 13:27:20,740 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 13:27:21,679 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 13:27:21,679 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 13:27:21,680 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 13:27:21,919 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:27:23,310 |     INFO | aiogram.event | Update id=315685979 is handled. Duration 911 ms by bot id=6643124937
+2024-08-09 13:27:44,107 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:27:44,107 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:27:44,108 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 13:27:46,644 |  WARNING | run | Use: python bot.py
+2024-08-09 13:27:46,651 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 13:27:47,611 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 13:27:47,611 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 13:27:47,611 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 13:27:47,839 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:27:50,979 |     INFO | aiogram.event | Update id=315685980 is handled. Duration 943 ms by bot id=6643124937
+2024-08-09 13:28:38,906 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:28:38,907 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:28:38,907 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 13:28:41,747 |  WARNING | run | Use: python bot.py
+2024-08-09 13:28:41,754 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 13:28:42,616 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 13:28:42,616 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 13:28:42,617 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 13:28:42,877 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:28:43,233 | CRITICAL | run | Critical error caused by 'Update' object has no attribute 'chat'
+Traceback (most recent call last):
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/middlewares/notify_15_min.py", line 51, in __call__
+    print(isinstance(event, Message), event.chat.type)
+                                      ^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/pydantic/main.py", line 828, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'Update' object has no attribute 'chat'
+2024-08-09 13:28:44,058 |     INFO | aiogram.event | Update id=315685981 is handled. Duration 826 ms by bot id=6643124937
+2024-08-09 13:29:04,777 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:29:04,777 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:29:04,778 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 13:29:07,519 |  WARNING | run | Use: python bot.py
+2024-08-09 13:29:07,526 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 13:29:08,403 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 13:29:08,403 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 13:29:08,403 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 13:29:08,699 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:29:12,777 |     INFO | aiogram.event | Update id=315685982 is handled. Duration 780 ms by bot id=6643124937
+2024-08-09 13:29:19,824 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:29:19,824 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:29:19,824 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 13:29:22,229 |  WARNING | run | Use: python bot.py
+2024-08-09 13:29:22,236 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 13:29:23,091 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 13:29:23,091 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 13:29:23,091 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 13:29:23,343 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:29:23,662 | CRITICAL | run | Critical error caused by 'Update' object has no attribute 'chat'
+Traceback (most recent call last):
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/middlewares/notify_15_min.py", line 52, in __call__
+    if isinstance(event.message, Message) and event.chat.type == 'private':
+                                              ^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/pydantic/main.py", line 828, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'Update' object has no attribute 'chat'
+2024-08-09 13:29:24,585 |     INFO | aiogram.event | Update id=315685983 is handled. Duration 923 ms by bot id=6643124937
+2024-08-09 13:29:45,171 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:29:45,171 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:29:45,171 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 13:29:47,721 |  WARNING | run | Use: python bot.py
+2024-08-09 13:29:47,728 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 13:29:48,564 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 13:29:48,565 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 13:29:48,565 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 13:29:48,838 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:29:49,107 | CRITICAL | run | Critical error caused by 'Update' object has no attribute 'from_user'
+Traceback (most recent call last):
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/middlewares/notify_15_min.py", line 53, in __call__
+    user_id = event.from_user.id
+              ^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/pydantic/main.py", line 828, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'Update' object has no attribute 'from_user'
+2024-08-09 13:29:50,039 |     INFO | aiogram.event | Update id=315685984 is handled. Duration 935 ms by bot id=6643124937
+2024-08-09 13:30:12,027 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:30:12,027 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:30:12,028 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 13:30:14,739 |  WARNING | run | Use: python bot.py
+2024-08-09 13:30:14,747 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 13:30:15,487 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 13:30:15,487 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 13:30:15,488 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 13:30:15,716 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:30:16,743 |     INFO | aiogram.event | Update id=315685985 is handled. Duration 781 ms by bot id=6643124937
+2024-08-09 13:30:45,983 |     INFO | aiogram.event | Update id=315685986 is handled. Duration 852 ms by bot id=6643124937
+2024-08-09 13:31:15,064 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:31:15,064 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:31:15,064 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 13:31:17,880 |  WARNING | run | Use: python bot.py
+2024-08-09 13:31:17,887 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 13:31:19,111 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 13:31:19,112 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 13:31:19,112 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 13:31:19,626 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:31:20,854 |     INFO | aiogram.event | Update id=315685987 is handled. Duration 883 ms by bot id=6643124937
+2024-08-09 13:32:32,292 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:32:32,293 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:32:32,293 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 13:32:35,075 |  WARNING | run | Use: python bot.py
+2024-08-09 13:32:35,083 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 13:32:36,014 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 13:32:36,014 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 13:32:36,014 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 13:32:36,254 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:32:37,403 |     INFO | aiogram.event | Update id=315685988 is handled. Duration 906 ms by bot id=6643124937
+2024-08-09 13:32:37,569 |     INFO | aiogram.event | Update id=315685989 is handled. Duration 847 ms by bot id=6643124937
+2024-08-09 13:32:52,749 |     INFO | aiogram.event | Update id=315685990 is handled. Duration 312 ms by bot id=6643124937
+2024-08-09 13:32:55,138 |     INFO | aiogram.event | Update id=315685991 is handled. Duration 341 ms by bot id=6643124937
+2024-08-09 13:33:11,692 |     INFO | aiogram.event | Update id=315685992 is handled. Duration 313 ms by bot id=6643124937
+2024-08-09 13:44:33,628 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:44:33,629 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:44:33,629 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 13:44:36,451 |  WARNING | run | Use: python bot.py
+2024-08-09 13:44:49,248 |  WARNING | run | Use: python bot.py
+2024-08-09 13:44:49,255 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 13:44:50,028 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 13:44:50,028 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 13:44:50,029 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 13:44:50,319 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:44:55,512 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:44:55,512 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:44:55,512 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 13:44:57,933 |  WARNING | run | Use: python bot.py
+2024-08-09 13:44:57,941 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 13:44:58,810 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 13:44:58,811 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 13:44:58,811 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 13:44:59,080 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:45:10,145 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:45:10,145 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:45:10,145 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 13:45:21,899 |  WARNING | run | Use: python bot.py
+2024-08-09 13:45:21,906 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 13:45:22,828 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 13:45:22,828 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 13:45:22,828 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 13:45:23,199 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:45:26,448 |     INFO | aiogram.event | Update id=315685993 is handled. Duration 815 ms by bot id=6643124937
+2024-08-09 13:45:35,636 |    ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-10' coro=<ReminderMiddleware.check_user_activity() done, defined at /Users/maxim/Desktop/projects/test_aiogram_bot/middlewares/notify_15_min.py:28> exception=TypeError("unsupported operand type(s) for -: 'float' and 'bytes'")>
+Traceback (most recent call last):
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/middlewares/notify_15_min.py", line 35, in check_user_activity
+    if current_time - last_activity_time >= 10:
+       ~~~~~~~~~~~~~^~~~~~~~~~~~~~~~~~~~
+TypeError: unsupported operand type(s) for -: 'float' and 'bytes'
+2024-08-09 13:45:57,623 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:45:57,623 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:45:57,623 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 13:46:00,353 |  WARNING | run | Use: python bot.py
+2024-08-09 13:46:00,361 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 13:46:01,183 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 13:46:01,183 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 13:46:01,183 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 13:46:01,480 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:46:02,619 |     INFO | aiogram.event | Update id=315685994 is handled. Duration 888 ms by bot id=6643124937
+2024-08-09 13:46:11,734 |    ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-10' coro=<ReminderMiddleware.check_user_activity() done, defined at /Users/maxim/Desktop/projects/test_aiogram_bot/middlewares/notify_15_min.py:28> exception=ValueError("invalid literal for int() with base 10: b'1723193161.0'")>
+Traceback (most recent call last):
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/middlewares/notify_15_min.py", line 36, in check_user_activity
+    if current_time - int(last_activity_time) >= 10:
+                      ^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: invalid literal for int() with base 10: b'1723193161.0'
+2024-08-09 13:47:45,737 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:47:45,737 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:47:45,737 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 13:47:48,394 |  WARNING | run | Use: python bot.py
+2024-08-09 13:47:48,401 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 13:47:49,295 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 13:47:49,295 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 13:47:49,295 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 13:47:49,528 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:47:51,252 |     INFO | aiogram.event | Update id=315685995 is handled. Duration 1485 ms by bot id=6643124937
+2024-08-09 13:47:59,769 |    ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-10' coro=<ReminderMiddleware.check_user_activity() done, defined at /Users/maxim/Desktop/projects/test_aiogram_bot/middlewares/notify_15_min.py:28> exception=AttributeError("'coroutine' object has no attribute 'decode'")>
+Traceback (most recent call last):
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/middlewares/notify_15_min.py", line 32, in check_user_activity
+    last_activity_time = await self.redis.get(task_key).decode('utf-8')
+                               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'coroutine' object has no attribute 'decode'
+2024-08-09 13:48:18,056 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:48:18,056 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:48:18,056 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 13:48:20,698 |  WARNING | run | Use: python bot.py
+2024-08-09 13:48:20,705 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 13:48:21,510 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 13:48:21,511 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 13:48:21,511 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 13:48:21,750 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:48:24,027 |     INFO | aiogram.event | Update id=315685996 is handled. Duration 904 ms by bot id=6643124937
+2024-08-09 13:48:36,587 |     INFO | aiogram.event | Update id=315685997 is handled. Duration 269 ms by bot id=6643124937
+2024-08-09 13:48:41,037 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:48:41,038 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:48:41,038 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 13:48:43,771 |  WARNING | run | Use: python bot.py
+2024-08-09 13:48:43,778 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 13:48:44,548 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 13:48:44,549 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 13:48:44,549 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 13:48:44,777 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:49:18,312 |     INFO | aiogram.event | Update id=315685998 is handled. Duration 942 ms by bot id=6643124937
+2024-08-09 13:53:22,129 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:53:22,130 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:53:22,130 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 13:53:24,845 |  WARNING | run | Use: python bot.py
+2024-08-09 13:53:24,852 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 13:53:25,696 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 13:53:25,697 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 13:53:25,697 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 13:53:26,031 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:53:39,495 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:53:39,496 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:53:39,496 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 13:53:42,118 |  WARNING | run | Use: python bot.py
+2024-08-09 13:53:42,125 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 13:53:42,938 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 13:53:42,938 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 13:53:42,939 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 13:53:43,194 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:53:45,408 |     INFO | aiogram.event | Update id=315685999 is handled. Duration 908 ms by bot id=6643124937
+2024-08-09 13:54:44,430 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:54:44,431 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:54:44,431 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 13:54:47,149 |  WARNING | run | Use: python bot.py
+2024-08-09 13:54:47,157 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 13:54:47,922 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 13:54:47,922 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 13:54:47,922 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 13:54:48,152 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:54:50,884 |     INFO | aiogram.event | Update id=315686000 is handled. Duration 857 ms by bot id=6643124937
+2024-08-09 13:54:54,407 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:54:54,407 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:54:54,407 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 13:54:57,017 |  WARNING | run | Use: python bot.py
+2024-08-09 13:55:41,789 |  WARNING | run | Use: python bot.py
+2024-08-09 13:55:41,797 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 13:55:42,808 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 13:55:42,809 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 13:55:42,809 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 13:55:43,037 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:55:53,043 |     INFO | aiogram.event | Update id=315686001 is handled. Duration 906 ms by bot id=6643124937
+2024-08-09 13:55:57,278 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:55:57,278 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:55:57,279 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 13:55:59,903 |  WARNING | run | Use: python bot.py
+2024-08-09 13:55:59,911 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 13:56:00,726 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 13:56:00,727 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 13:56:00,727 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 13:56:01,025 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:56:51,795 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:56:51,795 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:56:51,795 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 13:56:54,211 |  WARNING | run | Use: python bot.py
+2024-08-09 13:56:54,219 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 13:56:55,098 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 13:56:55,098 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 13:56:55,098 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 13:56:55,325 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:57:07,825 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:57:07,826 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:57:07,826 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 13:57:10,880 |  WARNING | run | Use: python bot.py
+2024-08-09 13:57:10,888 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 13:57:11,793 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 13:57:11,793 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 13:57:11,793 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 13:57:12,090 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:58:57,457 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:58:57,457 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:58:57,458 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 13:59:00,619 |  WARNING | run | Use: python bot.py
+2024-08-09 13:59:00,627 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 13:59:01,463 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 13:59:01,463 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 13:59:01,463 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 13:59:01,759 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:59:14,775 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:59:14,775 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:59:14,776 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 13:59:17,189 |  WARNING | run | Use: python bot.py
+2024-08-09 13:59:18,141 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 13:59:18,562 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 13:59:18,562 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 13:59:18,562 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 13:59:19,020 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:59:40,413 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 13:59:40,414 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 13:59:40,414 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 14:03:20,789 |  WARNING | run | Use: python bot.py
+2024-08-09 14:03:26,951 |  WARNING | run | Use: python bot.py
+2024-08-09 14:03:48,311 |  WARNING | run | Use: python bot.py
+2024-08-09 14:04:00,390 |  WARNING | run | Use: python bot.py
+2024-08-09 14:06:00,968 |  WARNING | run | Use: python bot.py
+2024-08-09 14:08:46,537 |  WARNING | run | Use: python bot.py
+2024-08-09 14:08:54,537 |  WARNING | run | Use: python bot.py
+2024-08-09 14:08:54,545 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 14:08:55,487 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 14:08:55,487 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 14:08:55,487 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 14:08:55,714 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 14:08:58,065 | CRITICAL | run | Critical error caused by 'Message' object has no attribute 'message'
+Traceback (most recent call last):
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/middlewares/notify_15_min.py", line 15, in __call__
+    if isinstance(event.message, Message) and event.message.chat.type == 'private':
+                  ^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/pydantic/main.py", line 828, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'Message' object has no attribute 'message'. Did you mean: 'message_id'?
+2024-08-09 14:08:58,857 |     INFO | aiogram.event | Update id=315686002 is handled. Duration 793 ms by bot id=6643124937
+2024-08-09 14:09:17,611 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 14:09:17,612 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 14:09:17,612 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 14:09:20,126 |  WARNING | run | Use: python bot.py
+2024-08-09 14:09:44,578 |  WARNING | run | Use: python bot.py
+2024-08-09 14:09:44,586 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 14:09:45,560 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 14:09:45,560 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 14:09:45,560 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 14:09:45,787 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 14:09:46,089 | CRITICAL | run | Critical error caused by 'Message' object has no attribute 'message'
+Traceback (most recent call last):
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/middlewares/notify_15_min.py", line 16, in __call__
+    if isinstance(event.message, Message) and event.message.chat.type == 'private':
+                  ^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/pydantic/main.py", line 828, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'Message' object has no attribute 'message'. Did you mean: 'message_id'?
+2024-08-09 14:09:46,908 |     INFO | aiogram.event | Update id=315686003 is handled. Duration 820 ms by bot id=6643124937
+2024-08-09 14:09:49,601 | CRITICAL | run | Critical error caused by 'Message' object has no attribute 'message'
+Traceback (most recent call last):
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/middlewares/notify_15_min.py", line 16, in __call__
+    if isinstance(event.message, Message) and event.message.chat.type == 'private':
+                  ^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/pydantic/main.py", line 828, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'Message' object has no attribute 'message'. Did you mean: 'message_id'?
+2024-08-09 14:09:49,913 |     INFO | aiogram.event | Update id=315686004 is handled. Duration 313 ms by bot id=6643124937
+2024-08-09 14:09:51,095 | CRITICAL | run | Critical error caused by 'Message' object has no attribute 'message'
+Traceback (most recent call last):
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/error.py", line 25, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/middlewares/user_context.py", line 49, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/fsm/middleware.py", line 42, in __call__
+    return await handler(event, data)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/telegram.py", line 121, in trigger
+    return await wrapped_inner(event, kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/event/handler.py", line 43, in call
+    return await wrapped()
+           ^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/dispatcher.py", line 276, in _listen_update
+    return await self.propagate_event(update_type=update_type, event=event, **kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 137, in _wrapped
+    return await self._propagate_event(
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 170, in _propagate_event
+    response = await router.propagate_event(update_type=update_type, event=event, **kwargs)
+               ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/aiogram/dispatcher/router.py", line 142, in propagate_event
+    return await observer.wrap_outer_middleware(_wrapped, event=event, data=kwargs)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/middlewares/notify_15_min.py", line 16, in __call__
+    if isinstance(event.message, Message) and event.message.chat.type == 'private':
+                  ^^^^^^^^^^^^^
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/venv/lib/python3.12/site-packages/pydantic/main.py", line 828, in __getattr__
+    raise AttributeError(f'{type(self).__name__!r} object has no attribute {item!r}')
+AttributeError: 'Message' object has no attribute 'message'. Did you mean: 'message_id'?
+2024-08-09 14:09:51,512 |     INFO | aiogram.event | Update id=315686005 is handled. Duration 419 ms by bot id=6643124937
+2024-08-09 14:10:14,902 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 14:10:14,902 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 14:10:14,903 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 14:10:17,617 |  WARNING | run | Use: python bot.py
+2024-08-09 14:10:17,625 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 14:10:18,537 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 14:10:18,537 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 14:10:18,538 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 14:10:18,835 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 14:10:21,971 |     INFO | aiogram.event | Update id=315686006 is handled. Duration 890 ms by bot id=6643124937
+2024-08-09 14:10:44,127 |     INFO | aiogram.event | Update id=315686007 is handled. Duration 390 ms by bot id=6643124937
+2024-08-09 14:12:01,327 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 14:12:01,327 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 14:12:01,328 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 14:12:04,355 |  WARNING | run | Use: python bot.py
+2024-08-09 14:12:04,364 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 14:12:05,598 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 14:12:05,598 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 14:12:05,598 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 14:12:05,867 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 14:12:08,038 |     INFO | aiogram.event | Update id=315686008 is handled. Duration 768 ms by bot id=6643124937
+2024-08-09 14:12:20,462 |     INFO | aiogram.event | Update id=315686009 is handled. Duration 319 ms by bot id=6643124937
+2024-08-09 14:16:11,990 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 14:16:11,991 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 14:16:11,991 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 14:16:14,734 |  WARNING | run | Use: python bot.py
+2024-08-09 14:16:14,742 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 14:16:15,575 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 14:16:15,575 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 14:16:15,575 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 14:16:15,884 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 14:16:17,073 |     INFO | aiogram.event | Update id=315686010 is handled. Duration 860 ms by bot id=6643124937
+2024-08-09 14:16:29,815 |     INFO | aiogram.event | Update id=315686011 is handled. Duration 350 ms by bot id=6643124937
+2024-08-09 14:16:32,881 |     INFO | aiogram.event | Update id=315686012 is not handled. Duration 2 ms by bot id=6643124937
+2024-08-09 14:17:56,454 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 14:17:56,454 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 14:17:56,454 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 14:17:59,204 |  WARNING | run | Use: python bot.py
+2024-08-09 14:17:59,212 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 14:18:00,135 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 14:18:00,135 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 14:18:00,135 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 14:18:00,364 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 14:18:01,511 |     INFO | aiogram.event | Update id=315686013 is handled. Duration 902 ms by bot id=6643124937
+2024-08-09 14:18:05,310 |     INFO | aiogram.event | Update id=315686014 is not handled. Duration 1 ms by bot id=6643124937
+2024-08-09 14:18:27,251 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 14:18:27,252 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 14:18:27,252 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 14:18:29,775 |  WARNING | run | Use: python bot.py
+2024-08-09 14:18:29,783 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 14:18:30,668 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 14:18:30,668 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 14:18:30,668 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 14:18:30,942 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 14:18:36,003 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 14:18:36,004 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 14:18:36,004 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 14:18:38,931 |  WARNING | run | Use: python bot.py
+2024-08-09 14:18:38,939 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 14:18:39,936 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 14:18:39,936 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 14:18:39,936 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 14:18:40,191 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 14:18:42,016 |     INFO | aiogram.event | Update id=315686015 is handled. Duration 1417 ms by bot id=6643124937
+2024-08-09 14:18:52,629 |     INFO | aiogram.event | Update id=315686016 is handled. Duration 270 ms by bot id=6643124937
+2024-08-09 14:18:55,988 |     INFO | aiogram.event | Update id=315686017 is handled. Duration 362 ms by bot id=6643124937
+2024-08-09 14:19:02,362 |    ERROR | asyncio | Task exception was never retrieved
+future: <Task finished name='Task-16' coro=<ReminderMiddleware.check_user_activity() done, defined at /Users/maxim/Desktop/projects/test_aiogram_bot/middlewares/reminder.py:31> exception=AttributeError("'NoneType' object has no attribute 'decode'")>
+Traceback (most recent call last):
+  File "/Users/maxim/Desktop/projects/test_aiogram_bot/middlewares/reminder.py", line 36, in check_user_activity
+    last_activity_time = last_activity_time.decode('utf-8')
+                         ^^^^^^^^^^^^^^^^^^^^^^^^^
+AttributeError: 'NoneType' object has no attribute 'decode'
+2024-08-09 14:19:50,867 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 14:19:50,867 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 14:19:50,868 |     INFO | aiogram.dispatcher | Polling stopped
+2024-08-09 14:19:53,613 |  WARNING | run | Use: python bot.py
+2024-08-09 14:19:53,620 |     INFO | apscheduler.scheduler | Adding job tentatively -- it will be properly scheduled when the scheduler starts
+2024-08-09 14:19:54,438 |     INFO | apscheduler.scheduler | Added job "send_message_at_9_am" to job store "default"
+2024-08-09 14:19:54,438 |     INFO | apscheduler.scheduler | Scheduler started
+2024-08-09 14:19:54,438 |     INFO | aiogram.dispatcher | Start polling
+2024-08-09 14:19:54,813 |     INFO | aiogram.dispatcher | Run polling for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 14:23:08,906 |  WARNING | aiogram.dispatcher | Received SIGINT signal
+2024-08-09 14:23:08,907 |     INFO | aiogram.dispatcher | Polling stopped for bot @test_aiogramrobot id=6643124937 - '[TEST] Aiogram bot'
+2024-08-09 14:23:08,907 |     INFO | aiogram.dispatcher | Polling stopped

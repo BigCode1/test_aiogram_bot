@@ -1,0 +1,36 @@
+<component name="InspectionProjectProfileManager">
+  <profile version="1.0">
+    <option name="myName" value="Project Default" />
+    <inspection_tool class="PyChainedComparisonsInspection" enabled="true" level="WEAK WARNING" enabled_by_default="true">
+      <option name="ignoreConstantInTheMiddle" value="true" />
+    </inspection_tool>
+    <inspection_tool class="PyPackageRequirementsInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredPackages">
+        <value>
+          <list size="13">
+            <item index="0" class="java.lang.String" itemvalue="aiogram" />
+            <item index="1" class="java.lang.String" itemvalue="aiohttp" />
+            <item index="2" class="java.lang.String" itemvalue="python-telegram-bot" />
+            <item index="3" class="java.lang.String" itemvalue="Flask" />
+            <item index="4" class="java.lang.String" itemvalue="telethon" />
+            <item index="5" class="java.lang.String" itemvalue="pyrogram" />
+            <item index="6" class="java.lang.String" itemvalue="python_telegram_bot" />
+            <item index="7" class="java.lang.String" itemvalue="google_api_python_client" />
+            <item index="8" class="java.lang.String" itemvalue="httplib2" />
+            <item index="9" class="java.lang.String" itemvalue="google-api-core" />
+            <item index="10" class="java.lang.String" itemvalue="yookassa" />
+            <item index="11" class="java.lang.String" itemvalue="Telethon" />
+            <item index="12" class="java.lang.String" itemvalue="python_Levenshtein" />
+          </list>
+        </value>
+      </option>
+    </inspection_tool>
+    <inspection_tool class="PyUnresolvedReferencesInspection" enabled="true" level="WARNING" enabled_by_default="true">
+      <option name="ignoredIdentifiers">
+        <list>
+          <option value="BaseException.get" />
+        </list>
+      </option>
+    </inspection_tool>
+  </profile>
+</component>

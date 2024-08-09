@@ -48,7 +48,7 @@ async def main():
         [
             BotCommand(command='start', description='Запустить бота'),
             BotCommand(command='help', description='Помощь'),
-            BotCommand(command='echo', description='Эхо режим'),
+            BotCommand(command='echo', description='Эхо'),
             BotCommand(command='reg', description='Регистрация'),
             BotCommand(command='photo', description='Узнать размеры фото'),
             BotCommand(command='weather', description='Узнать погоду'),
